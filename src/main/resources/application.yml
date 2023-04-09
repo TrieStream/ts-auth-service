@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ts-auth-service
+
+server:
+  port: 9000
+
+cloud:
+  config:
+    name: ts-auth-service
+    discovery:
+      enabled: true
+      serviceId: config-service
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
